@@ -1,0 +1,53 @@
+//Chevron referenced with https://stackoverflow.com/questions/15938933/creating-a-chevron-in-css/24651693
+.chevron {
+    position:relative;
+    display:block;
+    height:60px; /*height should be double border*/
+}
+.chevron::before,
+.chevron::after {
+    position:absolute;
+    display:block;
+    content:"";
+    border:25px solid transparent; /*adjust size*/
+}
+
+// chevron pointing UP
+.pointUp::before {
+    bottom:0;
+    border-bottom-color:$accentColor; /*Chevron Color*/
+}
+.pointUp::after {
+    bottom:-5px; /*adjust thickness*/
+    border-bottom-color:$mainColor; /*Match background colour*/
+}
+
+// chevron pointing RIGHT
+.pointRight::before {
+    left:0;
+    border-left-color:$accentColor; /*Chevron Color*/
+}
+.pointRight::after {
+    left:-5px; /*adjust thickness*/
+    border-left-color:#fff; /*Match background colour*/
+}
+
+// chevron pointing DOWN
+.pointDown::before {
+    top:0;
+    border-top-color:$accentColor; /*Chevron Color*/
+}
+.pointDown::after {
+    top:-5px; /*adjust thickness*/
+    border-top-color:#fff; /*Match background colour*/
+}
+
+// chevron pointing LEFT
+.pointLeft::before {
+    right:0;
+    border-right-color:$accentColor; /*Chevron Color*/
+}
+.pointLeft::after {
+    right:-5px; /*adjust thickness*/
+    border-right-color:#fff; /*Match background colour*/
+}
