@@ -4,26 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cinnamon Toast Media Test</title>
-  <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
   <main>
 
     <section class="upper">
-      <div class="chevron pointUp"></div>
       <div class="upperText">
-        <h3>more</h3>
+        <div class="chevron pointUp"></div>
+        <h3 class="moreText">more</h3>
         <h1>talent</h1>
       </div>
     </section>
     <section class="lower">
-      <h2>less</h2>
-      <h3>ego</h3>
+      <div class="lowerText">
+        <h2>less</h2>
+        <h3 class="egoText">ego</h3>
+        <div class="chevron pointDown"></div>
+      </div>
+
+
+      
+      <!-- These are the chevrons to point right/left however I could not figure out how to position and color them correctly so I attempted to play around with the chevrons before and after elements but I had no luck, I kept them out of the end result but you are free to comment them back in to see how I tried to implement them. -->
+
+      <!-- <div class="chevron pointRight"></div> -->
+      <!-- <div class="chevron pointLeft"></div> -->
     </section>
-    <div class="chevron pointRight"></div>
-    <div class="chevron pointDown"></div>
-    <div class="chevron pointLeft"></div>
   </main>
 </body>
 </html>

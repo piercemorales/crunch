@@ -183,7 +183,6 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   position: relative;
   display: block;
   height: 60px;
-  /*height should be double border*/
 }
 
 .chevron::before,
@@ -192,59 +191,46 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   display: block;
   content: "";
   border: 25px solid transparent;
-  /*adjust size*/
 }
 
 .pointUp::before {
   bottom: 0;
   border-bottom-color: #D3AA4B;
-  /*Chevron Color*/
 }
 
 .pointUp::after {
   bottom: -5px;
-  /*adjust thickness*/
   border-bottom-color: #E8604B;
-  /*Match background colour*/
 }
 
 .pointRight::before {
   left: 0;
   border-left-color: #D3AA4B;
-  /*Chevron Color*/
 }
 
 .pointRight::after {
   left: -5px;
-  /*adjust thickness*/
   border-left-color: #fff;
-  /*Match background colour*/
 }
 
 .pointDown::before {
   top: 0;
   border-top-color: #D3AA4B;
-  /*Chevron Color*/
 }
 
 .pointDown::after {
   top: -5px;
-  /*adjust thickness*/
   border-top-color: #fff;
-  /*Match background colour*/
 }
 
 .pointLeft::before {
   right: 0;
   border-right-color: #D3AA4B;
-  /*Chevron Color*/
 }
 
 .pointLeft::after {
   right: -5px;
-  /*adjust thickness*/
   border-right-color: #fff;
-  /*Match background colour*/
 }
 
 ul, li,
@@ -260,11 +246,26 @@ a {
 }
 
 body {
-  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
+  font-size: 62.5%;
+  font-family: "Oswald", sans-serif;
+}
+
+h1, h2, h3 {
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: 10rem;
+}
+
+h2 {
+  font-size: 8rem;
 }
 
 .upper {
+  position: relative;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -272,9 +273,83 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  height: 50vh;
+  height: 480.5px;
   background-color: #E8604B;
+}
+
+.upper .upperText {
+  top: 135px;
+  position: absolute;
+}
+
+.upper h1, .upper h3 {
+  color: #fff;
+}
+
+h3 {
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+.pointUp, .pointDown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.lower {
+  position: relative;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 480.5px;
+}
+
+.lower .lowerText {
+  position: absolute;
+  top: -49px;
+}
+
+.lower h2 {
+  color: #E8604B;
+}
+
+.lower h3 {
+  color: #D3AA4B;
+}
+
+.lower .pointRight, .lower .pointLeft {
+  position: absolute;
+}
+
+.lower .pointRight, .lower .pointLeft {
+  bottom: 445px;
+}
+
+.lower .pointRight {
+  right: 112px;
+}
+
+.lower .pointLeft {
+  left: 112px;
 }

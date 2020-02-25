@@ -10,15 +10,89 @@ a {
     margin: 0;
 }
 
-body {
-  font-family: $mainFont;
-  text-transform: uppercase;
+main {
 }
 
+body {
+  text-transform: uppercase;
+  font-size: 62.5%;
+  font-family: $mainFont;
+}
+
+// Global Font Styles
+h1, h2, h3 {
+  letter-spacing: 2px;;
+}
+
+h1 {
+  font-size: 10rem ;
+}
+h2 {
+  font-size: 8rem;
+}
+
+
+// upper section styling
 .upper {
+  position: relative;
+  text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: flex-end;
-  height: 50vh;
+  height: 480.5px;
   background-color: $mainColor;
+  .upperText {
+    top: 135px;
+    position: absolute;
+  }
+  h1,h3 {
+    color: $secondaryColor;
+  }
+}
+
+h3 {
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+.pointUp, .pointDown {
+  display: flex;
+  justify-content: center;
+}
+
+.lower {
+    position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 480.5px;
+  .lowerText {
+    position: absolute;
+    top: -49px;
+  }
+  h2 {
+    color: $mainColor;
+  }
+  h3 {
+    color: $accentColor;
+  }
+
+
+  // My attempt at positioning the two chevrons in the middle - I couldn't find the solution to edit the before and after elements to compensate for the full color of the chevron fill. My solution would be to just make a chevron image or take an icon to replace these pure CSS chevrons. 
+  .pointRight, .pointLeft {
+    position: absolute;
+  }
+  .pointRight, .pointLeft{
+    bottom: 445px;
+  }
+  .pointRight {
+    right: 112px;
+  }
+  .pointLeft {
+    left: 112px;
+  }
+  
 }
